@@ -8,22 +8,31 @@ It uses boto3 and PiCamera.
 
 First, install the library and set a default region:
 
-
-    $ pip install boto3
+```console
+pi@raspberrypi:~$ pip install boto3
+```
 
 Next, set up credentials (in e.g. ``~/.aws/credentials``):
 
+```console
+pi@raspberrypi:~$ aws configure
+```
 
     [default]
     aws_access_key_id = YOUR_KEY
     aws_secret_access_key = YOUR_SECRET
 
+
 ### Usage
 
 pilapse_video.py will upload video clips from your pi into your AWS bucket. Simply run: 
 
-'''python pilapse_video.py -i video_duration_rate_seconds -b your_bucket_name'''
+```console
+pi@raspberrypi:~$ python pilapse_video.py -i video_duration_rate_seconds -b your_bucket_name
+```
 
 pilapse_image.py will upload images from your pi into your AWS bucket. Simply run:
 
-'''python pilapse_video.py -i image_interval_rate_seconds -b your_bucket_name'''
+```console
+pi@raspberrypi:~$ python pilapse_video.py -i image_interval_rate_seconds -b your_bucket_name
+```
